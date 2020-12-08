@@ -4,8 +4,8 @@ This is my first Backend Beginner with Restful API using **ExpressJS**
 ## This project RESTful API use:
 1. NodeJS
 2. ExpressJS Framework
-3. PostgreSQL as DBMS
-4. Postman for testing
+3. PostgreSQL as DBMS with pgAdmin 4
+4. Postman for Testing API
 
 # Flowchart API
 This is an overview of my flowchart project
