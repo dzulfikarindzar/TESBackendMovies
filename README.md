@@ -1,7 +1,7 @@
 # Backend Beginner with RESTful API
 
-This is Backend Beginner with Restful API using **ExpressJS**
-## This API use:
+This is my first Backend Beginner with Restful API using **ExpressJS**
+## This my project API use:
 1. NodeJS
 2. ExpressJS Framework
 3. PostgreSQL as DBMS
