@@ -20,12 +20,12 @@ categories.get = () =>{
 
 categories.add = (data) =>{
     return new Promise((resolve, reject) =>{
-        db.query(`INSERT INTO public.category(category) VALUES ('${data.category}')`)
+        db.query(`INSERT INTO public.category(name) VALUES ('${data.name}')`)
         .then((res) => {
             resolve(data)
         })
         .catch((err) => {
-            reject(err)
+            reject("Input Category please!")
         })
     })
 }
