@@ -7,7 +7,7 @@ categories.get = () =>{
         db.query("SELECT * FROM public.category ORDER BY id ASC")
         .then((res) => {
             if (res.rows.length == 0) {
-                resolve({msg : "Data Kosong"})
+                resolve("Data Kosong!")
             } else {
                 resolve(res.rows)
             }
@@ -32,7 +32,7 @@ categories.add = (data) =>{
 
 categories.update = (data) =>{
     return new Promise((resolve, reject) =>{
-        db.query(`UPDATE public.category SET category='${data.category}' WHERE id=${data.id}`)
+        db.query(`UPDATE public.category SET name='${data.name}' WHERE id=${data.id}`)
         .then((res) => {
             resolve(data)
         })
