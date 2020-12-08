@@ -53,7 +53,7 @@ products.del = async (req, res) => {
        const result = await model.delProd(req.params.id)
         return respon(res, 200, result)
    }catch (error) {
-        return res.send(error)
+        return res.send(res, 400, error)
    }
 }
 
