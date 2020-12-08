@@ -5,7 +5,7 @@ const products = {}
 products.getAll= () => {
     return new Promise((resolve, reject) => {
       db.query(
-        "SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY product.id ASC")
+        "SELECT product.id, product.name, product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY product.id ASC")
         .then((res) => {
           if (res.rows.length == 0) {
             resolve('Data pada tabel Kosong!');
@@ -20,7 +20,7 @@ products.getAll= () => {
   }
   products.getSearch= (name) => {
     return new Promise((resolve, reject) => {
-      db.query( `SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category WHERE product.name ILIKE '%${name}%'`)
+      db.query( `SELECT product.id, product.name, product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category WHERE product.name ILIKE '%${name}%'`)
         .then((res) => {
           if (res.rows.length == 0) {
             resolve('Data di tabel Kosong!');
@@ -37,7 +37,7 @@ products.getAll= () => {
   products.getSort= (order, sort) => {
     return new Promise((resolve, reject) => {
       db.query(
-        `SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY ${order} ${sort}`,
+        `SELECT product.id, product.name, product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category ORDER BY ${order} ${sort}`,
       )
         .then((res) => {
           if (res.rows.length == 0) {
@@ -55,7 +55,7 @@ products.getAll= () => {
   products.get= (id) => {
     return new Promise((resolve, reject) => {
       db.query(
-        `SELECT product.id, product.name,  product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category WHERE product.id=${id}`,
+        `SELECT product.id, product.name, product.image, product.price, category.name AS category FROM public.product LEFT JOIN public.category ON category.id = product.id_category WHERE product.id=${id}`,
       )
         .then((res) => {
           if (res.rows.length == 0) {
