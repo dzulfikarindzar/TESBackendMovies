@@ -1,6 +1,6 @@
 # TESBACKEND with RESTful API
 
-This is my TES Backend Movies with Restful API using **ExpressJS**
+This is my TES Backend Movies with Restful API using **NodeJS** and **ExpressJS**
 ## This project RESTful API use:
 1. NodeJS
 2. ExpressJS Framework
