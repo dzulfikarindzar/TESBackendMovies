@@ -10,3 +10,4 @@ This is my TES Backend Movies with Restful API using **ExpressJS**
 ## This Backend Provides:
 1. Search by Name
 2. Sort by rating, actor and price
+3. CRUD data movies and category/genre movies
