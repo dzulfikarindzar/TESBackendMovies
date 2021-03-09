@@ -24,8 +24,8 @@ db.connect()
         console.log(err)
     })
 
-server.listen(9100, () => {
-    console.log("Service running on port 9100");
+server.listen(9400, () => {
+    console.log("Service running on port 9400");
 })
 
 

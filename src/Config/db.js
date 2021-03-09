@@ -5,7 +5,7 @@ const db = new Pool({
     password: process.env.DBPASSWORD,
     port: process.env.DBPORT,
     host: "localhost",
-    user: process.env.DBUSER
+    user: process.env.DBUSER,
 
 })
 

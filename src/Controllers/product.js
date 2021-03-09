@@ -1,6 +1,7 @@
 const products = {}
 const model = require('../Models/product')
 const respon = require('../Helpers/respon')
+const cloudUpload = require ('../Helpers/cloudUpload')
 
 products.getAll = async (req, res) => {
     const { search } = req.query;
@@ -31,9 +32,15 @@ products.getAll = async (req, res) => {
 
 products.add = async (req, res) => {
     try {
-        const result = await model.addProd(req.body)
-        return respon(res, 201, result)
+      if (req.file === undefined) {
+        console.log("halo");
+        return respon(res, 500, {msg: "Image harus diisi"})
+      }
+      const image_url = await cloudUpload(req.file.path)
+      const result = await model.add(req.body, image_url);
+      return respon(res, 201, result);
     } catch (error){
+      console.log(error);
         return respon(res, 400, error)
     }
     
